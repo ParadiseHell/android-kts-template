@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = Versions.android_compile_sdk
 
     defaultConfig {
+        minSdk = Versions.android_min_sdk
+        targetSdk = Versions.android_target_sdk
+
         applicationId = "org.paradisehell.android.kts.template"
-        minSdk = 16
-        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
 
@@ -17,8 +18,12 @@ android {
     }
 
     buildTypes {
-        getByName("release") {
+        getByName("debug") {
             isMinifyEnabled = false
+        }
+
+        getByName("release") {
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )

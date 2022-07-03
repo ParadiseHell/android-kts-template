@@ -9,6 +9,10 @@ object Versions {
     const val kotlin_gradle_plugin = "1.5.31"
 
     // android
+    const val android_compile_sdk = 31
+    const val android_min_sdk = 16
+    const val android_target_sdk = 31
+
     const val android_ktx = "1.7.0"
     const val android_appcompat = "1.4.1"
     const val android_material = "1.5.0"
